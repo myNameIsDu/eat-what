@@ -1,8 +1,9 @@
-import { useState, Fragment, type MouseEvent } from "react";
+import { useState, Fragment, type MouseEvent, useRef } from "react";
 interface DishesListPropsType {
   dishes: string[];
 }
 export function DishesList({ dishes }: DishesListPropsType) {
+  const dishesRef = useRef<string[]>([...dishes]);
   const [list, setList] = useState(() => {
     if (dishes.length) {
       // 根据 dishes 长度生成 [0,1,2,3] 的 list
@@ -18,6 +19,7 @@ export function DishesList({ dishes }: DishesListPropsType) {
       const newList = [...list];
       index && newList.splice(Number(index), 1);
       setList(newList);
+      index && dishesRef.current.splice(Number(index), 1);
     }
   };
   const handleAdd = () => {
@@ -33,7 +35,7 @@ export function DishesList({ dishes }: DishesListPropsType) {
               option
             </label>
             <input
-              defaultValue={dishes[i]}
+              defaultValue={dishesRef.current[i]}
               name={`dishes[${i}]`}
               required
               max={100}
