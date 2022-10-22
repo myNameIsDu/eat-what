@@ -1,0 +1,123 @@
+/* @tailwind base; */
+
+.mr-\[10px\]{
+  margin-right: 10px;
+}
+
+.mr-\[20px\]{
+  margin-right: 20px;
+}
+
+.ml-\[70px\]{
+  margin-left: 70px;
+}
+
+.mb-\[30px\]{
+  margin-bottom: 30px;
+}
+
+.mb-\[20px\]{
+  margin-bottom: 20px;
+}
+
+.flex{
+  display: flex;
+}
+
+.hidden{
+  display: none;
+}
+
+.h-\[50px\]{
+  height: 50px;
+}
+
+.h-screen{
+  height: 100vh;
+}
+
+.w-\[60px\]{
+  width: 60px;
+}
+
+.w-\[200px\]{
+  width: 200px;
+}
+
+.w-\[300px\]{
+  width: 300px;
+}
+
+.w-\[500px\]{
+  width: 500px;
+}
+
+.shrink-0{
+  flex-shrink: 0;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.rounded-\[5px\]{
+  border-radius: 5px;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.bg-clip-border{
+  background-clip: border-box;
+}
+
+.p-\[30px\]{
+  padding: 30px;
+}
+
+.pt-\[50px\]{
+  padding-top: 50px;
+}
+
+.pt-\[20px\]{
+  padding-top: 20px;
+}
+
+.\!text-left{
+  text-align: left !important;
+}
+
+.text-\[18px\]{
+  font-size: 18px;
+}
+
+.outline{
+  outline-style: solid;
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+body,
+html{
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
