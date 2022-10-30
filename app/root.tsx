@@ -10,14 +10,15 @@ import {
 } from "@remix-run/react";
 
 import styles from "./styles/root.css";
-import doodle from "./styles/doodle.css";
 
 export function links() {
   return [
     // tailwind 生成
     { rel: "stylesheet", href: styles },
-    // doodle css https://github.com/chr15m/DoodleCSS
-    { rel: "stylesheet", href: doodle },
+    {
+      rel: "stylesheet",
+      href: "https://resource.sunbohao.com/cornerCss/index-273b31bd39.css",
+    },
   ];
 }
 
@@ -39,7 +40,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="doodle">
+      <body className="corner">
         <div className="flex h-screen  flex-col	m-[0 auto] items-center pt-[20px]">
           <ul className="shrink-0 flex mb-[20px]">
             <NavLink style={activeStyle} to="help-you-choose">

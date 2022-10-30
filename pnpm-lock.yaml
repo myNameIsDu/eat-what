@@ -10,6 +10,7 @@ specifiers:
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
   concurrently: ^7.4.0
+  doodle.css: ^0.0.2
   eslint: ^8.23.1
   isbot: ^3.5.4
   localforage: ^1.10.0
@@ -24,6 +25,7 @@ dependencies:
   '@remix-run/react': 1.7.3_biqbaboplfbrettd7655fr4n2y
   '@remix-run/serve': 1.7.3_biqbaboplfbrettd7655fr4n2y
   concurrently: 7.4.0
+  doodle.css: 0.0.2
   isbot: 3.6.1
   localforage: 1.10.0
   lodash: 4.17.21
@@ -3016,6 +3018,10 @@ packages:
   /dom-accessibility-api/0.5.14:
     resolution: {integrity: sha512-NMt+m9zFMPZe0JcY9gN224Qvk6qLIdqex29clBvc/y75ZBX9YA9wNK3frsYvu2DI1xcCIwxwnX+TlsJ2DSOADg==}
     dev: true
+
+  /doodle.css/0.0.2:
+    resolution: {integrity: sha512-WHIPpiPAG+GgdSOu9tSfRisvSCClEobSMKZ2JmvbawKKO9aff2SIhlZC0w3nE8/k+kph1NS8tON+3VJiUpl1oA==}
+    dev: false
 
   /dotenv/16.0.3:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
