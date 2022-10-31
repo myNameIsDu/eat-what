@@ -1,6 +1,6 @@
 # eat what
 
-[在线地址](http://www.sunbohao.com:4000/add-recipe)
+[在线地址](http://eatwhat.work)
 
 演示：
 
