@@ -105,8 +105,14 @@ export default function HelpYouChoose() {
         if (current >= round) {
           isProcess.current = false;
           setTimeout(() => {
-            alert(dishes[choseDishIndex]);
-          }, 500);
+            window.cornerConfirm({
+              title: "已抽中：",
+              content: dishes[choseDishIndex],
+              okText: "就它了",
+              cancelText: "再来一次",
+              onCancel: handleChoose,
+            });
+          }, 200);
         }
       }, max * 1000);
     } else {
@@ -134,7 +140,7 @@ export default function HelpYouChoose() {
       <br />
       {dishes.length ? (
         <>
-          <div className="w-[500px] flex flex-wrap">
+          <div className="w-[500px] flex flex-wrap justify-center">
             {dishes.map((v, i) => {
               return (
                 <Fragment key={v}>
