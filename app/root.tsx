@@ -51,8 +51,22 @@ export default function App() {
             </NavLink>
             <li className="w-[200px]">临时食谱</li>
           </ul>
-          <div className="flex">
+          <div className="flex flex-grow">
             <Outlet />
+          </div>
+          <div className="text-center pb-[10px]">
+            <a
+              target="_blank"
+              href="https://github.com/myNameIsDu/eat-what"
+              rel="noreferrer"
+            >
+              <img
+                src="https://resource.sunbohao.com/uPic/github.png"
+                alt="github"
+                className="!border-none"
+                width={30}
+              />
+            </a>
           </div>
         </div>
         <ScrollRestoration />
@@ -61,7 +75,7 @@ export default function App() {
       </body>
       <script
         defer
-        src="https://resource.sunbohao.com/cornerCss/index-dc9c123395.js"
+        src="https://resource.sunbohao.com/cornerCss/index-746b8cab5c.js"
       />
     </html>
   );

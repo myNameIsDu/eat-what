@@ -3,7 +3,7 @@ import { Form } from "@remix-run/react";
 import localforage from "localforage";
 import { set } from "lodash";
 import { useEatWhat } from "../hooks/use-eat-what";
-import { DishesList } from "../comonent/dish-list";
+import { DishesList } from "../components/dish-list";
 
 type CollectedType = {
   meal: string;
@@ -33,21 +33,29 @@ export default function AddRecipe() {
     setIsSaving(true);
     localforage
       .setItem("eatWhat", newChoices)
+      .then(() => {
+        window.cornerConfirm({
+          title: "提示",
+          content: "保存成功",
+        });
+      })
       .catch(() => {
-        alert("保存失败");
+        window.cornerConfirm({
+          title: "提示",
+          content: "保存失败",
+        });
       })
       .finally(() => {
         setIsSaving(false);
-        alert("保存成功");
       });
   };
   return (
-    <div className="flex">
+    <div className="flex gap-[30px]">
       {choices.map(({ meal: { label, value }, dishes }) => {
         return (
           <Form method="post" key={value} onSubmit={handleSubmit}>
-            <fieldset className="p-[30px]">
-              <legend>今天{label}吃啥</legend>
+            <fieldset className="p-[20px] w-[500px]">
+              <legend>{label}吃啥</legend>
               <label className="mr-[10px] w-[60px]" htmlFor="meal">
                 meal
               </label>

@@ -1,9 +1,10 @@
 # eat what
 
-[在线地址](http://eatwhat.work)
+## 添加自己的食谱，随机帮你选择吃什么，告别纠结症
 
 演示：
+<img src="https://resource.sunbohao.com/uPic/Kapture 2022-11-08 at 17.21.38.gif" alt="Kapture2022-11-08at17.21.38"/>
 
-<img src="https://resource.sunbohao.com/uPic/Kapture 2022-10-23 at 04.09.57.gif" width='60%' alt="Kapture2022-10-23at04.09.57"/>
+[在线地址](http://eatwhat.work)
 
 所有数据均存在客户端😯

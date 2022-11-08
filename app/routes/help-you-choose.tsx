@@ -93,9 +93,9 @@ export default function HelpYouChoose() {
     choices.find(({ meal }) => meal.value === selectedMeal)?.dishes || [];
   const handleChoose = () => {
     if (isProcess.current) return;
-    isProcess.current = true;
     const max = dishes.length;
     if (max > 1) {
+      isProcess.current = true;
       const choseDishIndex = Math.floor(Math.random() * max);
       const round = max * lapsNumber + choseDishIndex;
       animate((process) => {
@@ -116,7 +116,10 @@ export default function HelpYouChoose() {
         }
       }, max * 1000);
     } else {
-      alert(dishes[0]);
+      window.cornerConfirm({
+        title: "抽取结果：",
+        content: `已抽中：${dishes[0]}`,
+      });
     }
   };
   return (
