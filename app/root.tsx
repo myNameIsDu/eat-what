@@ -17,7 +17,7 @@ export function links() {
     { rel: "stylesheet", href: styles },
     {
       rel: "stylesheet",
-      href: "https://resource.sunbohao.com/cornerCss/index-e0321889ef.css",
+      href: "https://resource.sunbohao.com/cornerCss/index-2a2cb631fc.css",
     },
   ];
 }
@@ -61,7 +61,7 @@ export default function App() {
       </body>
       <script
         defer
-        src="https://resource.sunbohao.com/cornerCss/index-85eb5e1736.js"
+        src="https://resource.sunbohao.com/cornerCss/index-dc9c123395.js"
       />
     </html>
   );
