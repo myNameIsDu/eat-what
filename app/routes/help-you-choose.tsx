@@ -106,8 +106,8 @@ export default function HelpYouChoose() {
           isProcess.current = false;
           setTimeout(() => {
             window.cornerConfirm({
-              title: "已抽中：",
-              content: dishes[choseDishIndex],
+              title: "抽取结果：",
+              content: `已抽中：${dishes[choseDishIndex]}`,
               okText: "就它了",
               cancelText: "再来一次",
               onCancel: handleChoose,
@@ -143,19 +143,16 @@ export default function HelpYouChoose() {
           <div className="w-[500px] flex flex-wrap justify-center">
             {dishes.map((v, i) => {
               return (
-                <Fragment key={v}>
-                  <br />
-                  <button
-                    style={{
-                      backgroundColor:
-                        i === activeIndex ? "rgb(173 171 171)" : "inherit",
-                    }}
-                    className="h-[50px]  !text-left text-[18px] bg-clip-border	rounded-[5px]"
-                  >
-                    {v}
-                  </button>
-                  <br />
-                </Fragment>
+                <button
+                  key={v}
+                  style={{
+                    backgroundColor:
+                      i === activeIndex ? "rgb(173 171 171)" : "inherit",
+                  }}
+                  className="h-[50px]  !text-left text-[18px] bg-clip-border	rounded-[5px] m-[0_2px]"
+                >
+                  {v}
+                </button>
               );
             })}
           </div>
