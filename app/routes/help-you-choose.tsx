@@ -1,5 +1,6 @@
-import { useState, type ChangeEvent, useRef, Fragment } from "react";
+import { useState, type ChangeEvent, useRef } from "react";
 import { useEatWhat } from "../hooks/use-eat-what";
+import { cornerConfirm } from "cornercss";
 
 // 参考  https://zhuanlan.zhihu.com/p/60193908
 class Cubic {
@@ -105,7 +106,7 @@ export default function HelpYouChoose() {
         if (current >= round) {
           isProcess.current = false;
           setTimeout(() => {
-            window.cornerConfirm({
+            cornerConfirm({
               title: "抽取结果：",
               content: `已抽中：${dishes[choseDishIndex]}`,
               okText: "就它了",
@@ -116,7 +117,7 @@ export default function HelpYouChoose() {
         }
       }, max * 1000);
     } else {
-      window.cornerConfirm({
+      cornerConfirm({
         title: "抽取结果：",
         content: `已抽中：${dishes[0]}`,
       });

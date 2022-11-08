@@ -10,6 +10,7 @@ import {
 } from "@remix-run/react";
 
 import styles from "./styles/root.css";
+import cornercss from "cornercss/index.css";
 
 export function links() {
   return [
@@ -17,7 +18,7 @@ export function links() {
     { rel: "stylesheet", href: styles },
     {
       rel: "stylesheet",
-      href: "https://resource.sunbohao.com/cornerCss/index-2a2cb631fc.css",
+      href: cornercss,
     },
   ];
 }
@@ -73,10 +74,6 @@ export default function App() {
         <Scripts />
         <LiveReload />
       </body>
-      <script
-        defer
-        src="https://resource.sunbohao.com/cornerCss/index-746b8cab5c.js"
-      />
     </html>
   );
 }

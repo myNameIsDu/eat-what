@@ -4,6 +4,7 @@ import localforage from "localforage";
 import { set } from "lodash";
 import { useEatWhat } from "../hooks/use-eat-what";
 import { DishesList } from "../components/dish-list";
+import { cornerConfirm } from "cornercss";
 
 type CollectedType = {
   meal: string;
@@ -34,13 +35,13 @@ export default function AddRecipe() {
     localforage
       .setItem("eatWhat", newChoices)
       .then(() => {
-        window.cornerConfirm({
+        cornerConfirm({
           title: "提示",
           content: "保存成功",
         });
       })
       .catch(() => {
-        window.cornerConfirm({
+        cornerConfirm({
           title: "提示",
           content: "保存失败",
         });
